@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños!</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 350px;
+            animation: popUp 0.8s ease;
+        }
+        h1 { color: #ff477e; font-size: 24px; }
+        p { color: #555; font-size: 16px; }
+        button {
+            background-color: #ff477e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+        button:hover { background-color: #d9366b; }
+        #mensaje-secreto {
+            display: none;
+            margin-top: 15px;
+            color: #ffb703;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        @keyframes popUp {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>🎉 ¡Feliz Cumpleaños! 🎂</h1>
+        <p>Has recibido una tarjeta secreta. Haz clic en el botón para descubrir tu sorpresa.</p>
+        <button onclick="revelarSorpresa()">¡Abrir tarjeta!</button>
+        <div id="mensaje-secreto">¡Que tengas un día increíble lleno de alegría y buena música! 🎈🎁</div>
+    </div>
+
+    <script>
+        function revelarSorpresa() {
+            const mensaje = document.getElementById('mensaje-secreto');
+            mensaje.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
